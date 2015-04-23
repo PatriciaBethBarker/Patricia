@@ -52,9 +52,9 @@ console.log("add5 + 10", result);
 var each = function(list, f) { //using the items - costomizable and adaptable
   //loop through list
   for(var i = 0; i <list.length; i++) {
-  // f is passed an item and its index
-  var item = list[i];
-  f(item, i);
+    // f is passed an item and its index
+    var item = list[i];
+    f(item, i);
   }
 };
 
