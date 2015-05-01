@@ -3,7 +3,7 @@ module.exports=[
     "Never call a man a fool.  Borrow from him.",
     "Never eat anything bigger than your head.",
     "Never eat in a restaurant that rotates or is above the 10th floor.",
-    "Never eat rutabaga on any day of the week that has a "\y\" in it.",
+    "Never eat rutabaga on any day of the week that has a \"y\" in it.",
     "Never give a inch!",
     "Never hatchet your Counts before they chicken.",
     "Never lick a gift horse in the mouth.",
