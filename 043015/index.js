@@ -1,7 +1,7 @@
 var hapi = require("hapi");
 
-var server = new hapi.server();
-server.connection([ port: 8000]);
+var server = new hapi.Server(); //make sure the Server is in caps, constructor uses new -yes I want to build a new Object
+server.connection({ port: 8000});
 server.start();
 server.views({
   engines: {
@@ -12,9 +12,9 @@ server.views({
 })
 
 server.route({
-  medoth: "GET",
+  method: "GET",
   path: "/",
   handler: function(req, reply){
-    reply.view("index");  
+    reply.view("index");
   }
 });
