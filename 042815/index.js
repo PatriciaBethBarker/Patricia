@@ -23,7 +23,7 @@ server.route({
     counter++;
     console.log(request.params);
 
-    reply("Hello," + name + ", from Hapi.js" = counter);
+    reply("Hello," + name + ", from Hapi.js" + counter);
 
   }
 
@@ -33,6 +33,6 @@ server.route({
   method:  "GET",
   path: "/{name}/{id}",
     handler: function(request, reply) {
-      reply(request.params.name + "|" + request.params.id);  
+      reply(request.params.name + "|" + request.params.id);
     }
 })
