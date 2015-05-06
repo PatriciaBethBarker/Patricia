@@ -8,7 +8,9 @@ serever.views({
   path: "templates",
   engines: {
     html: require("handlebars")
-  }
+  },
+  layoutPath: "layouts", //this is a wrapper
+  layout: "default"
 });
 
 server.route({
@@ -18,3 +20,13 @@ server.route({
     reply.view("index");
   }
 });
+
+server.route({
+  method: "GET",
+  path: "/assets/{param*}",
+  handler: {
+    directory:{
+      path: "public"
+    }
+    }
+})
