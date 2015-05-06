@@ -10,7 +10,8 @@ serever.views({
     html: require("handlebars")
   },
   layoutPath: "layouts", //this is a wrapper
-  layout: "default"
+  layout: "default",
+  inCached: false
 });
 
 server.route({
