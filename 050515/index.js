@@ -28,9 +28,12 @@ server.route({
   method: "GET",
   path: "/classes" //making a new page
   handler: function(req, reply){
+    fs.readFile("classes.json", utf8, function(err, data){
     reply.view("classes", {
-      title: "Classes"
+      title: "Classes",
+      classes: JSON.parse(data)
     });
+  });
   }
 })
 

@@ -1,7 +1,14 @@
 These are my classes this quarter
 
 <ul>
-  <li>ITC 172</li> <!--li, td, tr and p tags are self closing -->
-  <li>ITC 260</li>
-  <li>ITC 298</li>
+  {{#classes}} <!-- opens-->
+  <li>
+    <a
+      href="/classes/{{link}}}"
+      class="class-link"
+      data-course="{{link}}"
+    >
+      {{name}}
+    </a>       <!--li, td, tr and p tags are self closing -->
+  {{/classes}} <!-- closes-->
 </ul>
