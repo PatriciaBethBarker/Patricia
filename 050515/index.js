@@ -1,17 +1,20 @@
 var hapi = require("hapi");
+var fs = require ("fs");
 
 var server = new hapi.Server();
 server.connection({port: 8000});
 server.start();
 
-serever.views({
+server.views({
   path: "templates",
   engines: {
     html: require("handlebars")
   },
   layoutPath: "layouts", //this is a wrapper
   layout: "default",
-  inCached: false
+  partialsPath:
+    "templates/partials",
+  isCached: false
 });
 
 server.route({
@@ -26,7 +29,7 @@ server.route({
 
 server.route({
   method: "GET",
-  path: "/classes" //making a new page
+  path: "/classes", //making a new page
   handler: function(req, reply){
     fs.readFile("classes.json", utf8, function(err, data){
     reply.view("classes", {
@@ -35,7 +38,7 @@ server.route({
     });
   });
   }
-})
+});
 
 server.route({
   method: "GET",
@@ -45,4 +48,4 @@ server.route({
       path: "public"
     }
     }
-})
+});

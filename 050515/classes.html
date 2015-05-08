@@ -2,13 +2,8 @@ These are my classes this quarter
 
 <ul>
   {{#classes}} <!-- opens-->
-  <li>
-    <a
-      href="/classes/{{link}}}"
-      class="class-link"
-      data-course="{{link}}"
-    >
-      {{name}}
-    </a>       <!--li, td, tr and p tags are self closing -->
+  {{> classLink}}
+ <!-- I might use this somewhere else-->
+      <!--li, td, tr and p tags are self closing -->
   {{/classes}} <!-- closes-->
 </ul>
