@@ -29,15 +29,15 @@ server.route({
 
 server.route({
   method: "GET",
-  path: "/classes", //making a new page
+  path: "/classes", //matches the name in your html files
   handler: function(req, reply){
-    fs.readFile("classes.json", "utf8", function(err, data){
-    reply.view("classes", {
-      title: "Classes",
-      classes: JSON.parse(data)
-    });
-  });
-  }
+    fs.readFile("classes.json", "utf8", function(err, data){//read the file 1st
+      reply.view("classes", {// then you can do the next task
+        title: "Classes",
+        classes: JSON.parse(data).classes
+                });
+              });
+          }
 });
 
 server.route({
