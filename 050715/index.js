@@ -1,6 +1,9 @@
 var hapi = require("hapi");
+var listings = require("./movies.json")
 
-var server - new hapi.Server();
+//load my movie listings by showing the path
+  console.log(listings)
+var server = new hapi.Server();
 //constructors are always capitalized
 server.connection({ port: 8000});
 server.start();
@@ -14,7 +17,10 @@ server.views({
   path: "templates",
   //let hapi know about the layout template folder
   layoutPath: "layouts",
-  layout: "default"
+  layout: "default",
+  //add a partials path here
+  partialsPath: "templates/partials",
+  isCached: false
 });
 
 server.route({
@@ -22,14 +28,14 @@ server.route({
   path: "/",
   handler: function(req, reply) {
     //we still just reply with a view
-    reply.view("inner", { adj: "blank", title: "Text Page"})
+    reply.view("inner", { title: "Text Page", movies: listings.movies})
   }
 });
 
 server.route({
   method: "GET",
   //we must use "param" here, not another route varibale name
-  path: "assets/{param*}",
+  path: "/assets/{param*}",
   handler:  {
     directory: {
       path: "public"
