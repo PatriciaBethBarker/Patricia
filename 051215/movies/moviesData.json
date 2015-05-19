@@ -1,11 +1,10 @@
-
 {
   "movies": [
     {
       "title": "What We Do in the Shadows",
       "times": ["5:20pm", "8:00pm"],
       "poster": "http://ia.media-imdb.com/images/M/MV5BMjAwNDA5NzEwM15BMl5BanBnXkFtZTgwMTA1MDUyNDE@._V1_SX214_AL_.jpg",
-      "starring": ["Jemaine Clement", "Taika Waititi", "Jonathan Brugh"], 
+      "starring": ["Jemaine Clement", "Taika Waititi", "Jonathan Brugh"],
       "length": 86
     },
     {
@@ -23,13 +22,36 @@
       "length": 90
     }
   ],
-
   "books": [
     {
-    "title": "Man of Lamancha",
-    "author": "Hemmingway",
-    "ISDN": "12344HFS"
-
+      "title": "What We Do in the Shadows",
+      "times": ["5:20pm", "8:00pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMjAwNDA5NzEwM15BMl5BanBnXkFtZTgwMTA1MDUyNDE@._V1_SX214_AL_.jpg",
+      "starring": ["Jemaine Clement", "Taika Waititi", "Jonathan Brugh"],
+      "length": 86
+    },
+    {
+      "title": "Ex Machina",
+      "times": ["3:00pm", "5:30pm", "8:10pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX214_AL_.jpg",
+      "starring": ["Alicia Vikander", "Domnhall Gleeson", "Oscar Isaac"],
+      "length": 108
+    }
+  ],
+  "cds": [
+    {
+      "title": "What We Do in the Shadows",
+      "times": ["5:20pm", "8:00pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMjAwNDA5NzEwM15BMl5BanBnXkFtZTgwMTA1MDUyNDE@._V1_SX214_AL_.jpg",
+      "starring": ["Jemaine Clement", "Taika Waititi", "Jonathan Brugh"],
+      "length": 86
+    },
+    {
+      "title": "Ex Machina",
+      "times": ["3:00pm", "5:30pm", "8:10pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX214_AL_.jpg",
+      "starring": ["Alicia Vikander", "Domnhall Gleeson", "Oscar Isaac"],
+      "length": 108
     }
   ]
 }
