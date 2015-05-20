@@ -3,6 +3,7 @@ var orders = require("./orders");
 
 var hapi = require("hapi");
 var server = new hapi.Server();
+
 server.connection({
   port: 8000
 });
@@ -17,20 +18,20 @@ server.views({
 
 server.route({
   method: "GET",
-  path: "/",
-  handler: function(req, reply){
-    var name = req.params.name || "Anon";
+  path: "/{name?}",
+  handler: function(request, reply){
+    var name = request.params.name || "Anon";
     reply.view("index.html", {
       user: name
-    })
+    });
   }
 });
 
 server.route({
   method: "POST",
   path: "/order",
-  handler: function(req, reply){
-    orders.add(req.payload);
+  handler: function(request, reply){
+    orders.add(request.payload);
     reply.view("index.html", {
       pizzas: orders.pizzas
     });
