@@ -1,5 +1,5 @@
 //pizza.js
-var orders = require("./orders");
+var orders = require("./orders"); //grab the module we created, next to pizza.js
 
 var hapi = require("hapi");
 var server = new hapi.Server();
@@ -31,11 +31,11 @@ server.route({
   method: "POST",
   path: "/order",
   handler: function(request, reply) {
-    console.log(request.payload);//I want to see what came in through this form
-    reply.view("index.html");
-    //orders.add(request.payload);
-    //reply.view("index.html", {
-      //pizzas: orders.pizzas
-    //});
+    //console.log(request.payload);//I want to see what came in through this form
+    //reply.view("index.html");
+    orders.add(request.payload);//take what came in from the form and add to page
+    reply.view("index.html", {
+      pizzas: orders.pizzas
+    });
   }
 });
