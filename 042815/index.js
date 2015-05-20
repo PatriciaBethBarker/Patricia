@@ -29,10 +29,10 @@ server.route({
 
 });
 
-server.route({
-  method:  "GET",
-  path: "/{name}/{id}",
-    handler: function(request, reply) {
-      reply(request.params.name + "|" + request.params.id);
-    }
-})
+//server.route({
+  //method:  "GET",
+  //path: "/{name}/{id}",
+    //handler: function(request, reply) {
+      //reply(request.params.name + "|" + request.params.id);
+    //}
+//})
