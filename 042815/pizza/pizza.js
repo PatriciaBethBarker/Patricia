@@ -31,7 +31,7 @@ server.route({
   method: "POST",
   path: "/order",
   handler: function(request, reply) {
-    console.log(request.params);
+    console.log(request.payload);
     reply.view("index.html");
     //orders.add(request.payload);
     //reply.view("index.html", {
