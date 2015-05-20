@@ -31,7 +31,7 @@ server.route({
   method: "POST",
   path: "/order",
   handler: function(request, reply) {
-    console.log(request.payload);
+    console.log(request.payload);//I want to see what came in through this form
     reply.view("index.html");
     //orders.add(request.payload);
     //reply.view("index.html", {
