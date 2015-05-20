@@ -23,7 +23,7 @@ server.route({
     counter++;
     console.log(request.params);
 
-    reply("Hello," + name + ", from Hapi.js" + counter);
+    reply("Hello," + name + ", from Pizza Shack" + counter);
 
   }
 
