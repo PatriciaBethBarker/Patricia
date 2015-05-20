@@ -19,7 +19,7 @@ server.views({
 server.route({
   method: "GET",
   path: "/{name?}",
-  handler: function(request, reply){
+  handler: function(request, reply) {
     var name = request.params.name || "Anon";
     reply.view("index.html", {
       user: name
@@ -30,10 +30,12 @@ server.route({
 server.route({
   method: "POST",
   path: "/order",
-  handler: function(request, reply){
-    orders.add(request.payload);
-    reply.view("index.html", {
-      pizzas: orders.pizzas
-    });
+  handler: function(request, reply) {
+    console.log(request.params);
+    reply.view("index.html");
+    //orders.add(request.payload);
+    //reply.view("index.html", {
+      //pizzas: orders.pizzas
+    //});
   }
 });
