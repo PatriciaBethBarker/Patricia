@@ -20,7 +20,7 @@ server.views({
 server.route({
   method:  "GET",
   path: "/",
-  handler: function(req, reply){
+  handler: function(request, reply){
     reply.view("index", {
       title: "Home"
     });
@@ -30,22 +30,22 @@ server.route({
 server.route({
   method: "GET",
   path: "/classes", //matches the name in your html files
-  handler: function(req, reply){
-    fs.readFile("classes.json", "utf8", function(err, data){//read the file 1st
+  handler: function(request, reply) {
+    fs.readFile("classes.json", "utf8", function(err, data) {//read the file 1st
       reply.view("classes", {// then you can do the next task,
         title: "Classes",
         classes: JSON.parse(data).classes //pass the data to your json files
-                });
-              });
-          }
+      });
+    });
+  }
 });
 
 server.route({
   method: "GET",
   path: "/assets/{param*}",
-  handler: {
+  handler: function(request, reply) {
     directory:{
       path: "public"
     }
-    }
+  }
 });
