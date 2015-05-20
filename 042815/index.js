@@ -10,7 +10,7 @@ server.start(function(){
 
 });
 
-var counter = 0; // counter is outside the route, a value running the function every time page reloads
+//var counter = 0; // counter is outside the route, a value running the function every time page reloads
                  // if you kill the server, it resets back to one
                  // user table, account, saves to a db
 server.route({
@@ -20,11 +20,11 @@ server.route({
     //console.log(request.headers);
     var name = request.params.name ||  //or be Anon
     "Anonymous";
-    counter++;
+  //  counter++;
     console.log(request.params);
 
-    reply("Hello," + name + ", from Pizza Shack " + counter);
-
+    //("Hello," + name + ", from Pizza Shack " + counter);
+    reply("Hello," + name + ", from Pizza Shack");
   }
 
 });
