@@ -1,3 +1,5 @@
+//index.js
+
 var hapi = require("hapi");
 
 console.log(hapi);
