@@ -24,7 +24,7 @@ server.route({
     var name = request.params.name || "Anon";
     reply.view("index.html", {
       user: name,
-      pizzas: order.pizzas
+      pizzas: orders.pizzas
     });
   }
 });
