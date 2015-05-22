@@ -20,12 +20,22 @@ server.views({
 server.route({
   method:  "GET",
   path: "/",
-  handler: function(request, reply){
+  handler: function(request, reply) {
     reply.view("index", {
       title: "Home"
     });
   }
 });
+
+server.route({
+  method:  "GET",
+  path: "/public/{file}",
+  handler: function(request, reply) {
+    //load the file
+    //pass it into reply
+
+  }
+})
 
 server.route({
   method: "GET",
