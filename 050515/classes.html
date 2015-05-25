@@ -2,8 +2,9 @@
 
 <ul>
   {{#classes}} <!-- opens-->
-  {{> classLink}}
- <!-- I might use this somewhere else-->
-      <!--li, td, tr and p tags are self closing -->
+    <li> <a href="/classes/{{url}}">{{name}}</a> - {{institution}}
+<!--{{> classLink}}-->
   {{/classes}} <!-- closes-->
+ <!-- I might use this somewhere else-->
+ <!--li, td, tr and p tags are self closing -->
 </ul>

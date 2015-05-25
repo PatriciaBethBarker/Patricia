@@ -13,7 +13,7 @@ server.views({ //define templates on a per type
   isCached: false,
   layoutPath: "layouts", // this is a wrapper
   layout: "default", // here is the default layout
-  partialsPath:
+  partialsPath: //partials have to load before anything else
     "templates/partials",
 });
 
@@ -41,9 +41,16 @@ server.route({
   path: "/classes", //path matches the name of the html files
   handler: function(request, reply) {
     fs.readFile("classes.json", "utf8", function(err, data) {//read the file 1st
+      var classList = JSON.parse(data);
       reply.view("classes", {// then you can do the next task,
         title: "Classes",
-        classes: JSON.parse(data).classes //pass the data to my json files
+        admin: true,
+        //classes: [ //take property objects in this array and inject into the template
+          //{ name: "ITC 172" url: "itc172" institution: "SCC" }
+          //{ name: "ITC 260" url: "itc260" institution: "SCC" }
+          //{ name: "ITC 298" url: "itc298" institution: "SCC" }
+        //] // or query them from a database called classes.json - parse classList
+        classes: classList //pass the data to my json files
       });
     });
   }
