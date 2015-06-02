@@ -27,7 +27,7 @@ sqlite.Database("test.db", function()//it will create a db if it doesn't exist
     });
 
     db.all("SELECT * FROM users", function(err, results) {
-      console,log(results);
+      console.log(results);
     });//closes the SELECT *
 
   });//closes CREATE TABLE
